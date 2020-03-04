@@ -144,7 +144,7 @@ function load() {
 }
 
 function cheat() {
-  game.depression = game.depression.times(10);
+  game.depression = game.depression.times(10)
   document.getElementById("amount").innerHTML = formatValue(game.depression, 2)
 }
 
