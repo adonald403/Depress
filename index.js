@@ -3,7 +3,8 @@ let game = {
   costs: [new Decimal(1)],
   amounts: [new Decimal(0)],
   depression: new Decimal(1),
-  prestige: [new Decimal(1)]
+  prestige: [new Decimal(1)],
+  clicks: [new Decimal(0)]
 }
 
 
@@ -144,8 +145,10 @@ function load() {
 }
 
 function cheat() {
-  game.depression = game.depression.times(10)
+  game.depression = new Decimal(game.depression.times(10))
+  game.clicks = new Decimal(game.clicks.plus(1))
   document.getElementById("amount").innerHTML = formatValue(game.depression, 2)
+  documant.getElementByID("cheatClick").innerHTML = formatValue(game.clicks, 2)
 }
 
 
