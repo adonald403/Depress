@@ -145,7 +145,7 @@ function load() {
 
 
 
-var cheat = false;
+var cheat = true;
 
 
 setInterval(function() {
